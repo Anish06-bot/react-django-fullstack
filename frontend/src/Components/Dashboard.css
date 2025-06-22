@@ -1,0 +1,108 @@
+/* Layout */
+.dashboard {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f4f6;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 240px;
+  background: #1f2937;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar-logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #facc15;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.sidebar-menu li {
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.sidebar-menu li:hover {
+  background: #374151;
+}
+
+.logout {
+  margin-top: auto;
+  color: #f87171;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Transparent Top Bar */
+.transparent-topbar {
+  position: fixed;
+  top: 0;
+  left: 240px; /* match sidebar width */
+  right: 0;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.6); /* semi-transparent */
+  backdrop-filter: blur(8px); /* optional: adds blur */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Header and Stats */
+.main-header {
+  margin-bottom: 25px;
+  padding-top: 70px; /* for space under fixed topbar */
+}
+
+.stats {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Cards */
+.card {
+  flex: 1 1 220px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #111827;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2563eb;
+}
